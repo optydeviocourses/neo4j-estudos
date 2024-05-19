@@ -1,1 +1,1 @@
-LOAD CSV FROM CSV "f:///student.csv" AS row RETURN row
+LOAD CSV FROM  "f:///student.csv" AS ROW RETURN ROW
