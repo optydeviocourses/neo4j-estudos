@@ -1,0 +1,17 @@
+
+match(n:Person)
+return n
+
+match(n:Movie)
+return n
+
+match(n{title:"The Da Vinci Code"})
+set n:Action
+return n
+
+match(m:Movie:Action)
+return m
+
+
+match(m:Action)
+return m

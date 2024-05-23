@@ -1,0 +1,12 @@
+create (n:Person{name:"Anne", age:20})
+return n
+
+
+create (n:Dancer{name:"Li", age:22})
+return n
+
+create (n:Dancer:Supplier{name:"Li", age:22})
+return n
+
+
+

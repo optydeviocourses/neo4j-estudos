@@ -1,0 +1,9 @@
+create (n:Person)
+return n
+
+create (n:Employee)
+return n
+
+
+create (anne :Person:Employee:Footballer)
+return anne

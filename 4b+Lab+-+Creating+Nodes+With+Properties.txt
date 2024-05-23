@@ -1,0 +1,2 @@
+create (n{name:"Peter", age:25, email:"p@gmail.com"})
+return n

@@ -1,0 +1,44 @@
+Without labels
+---------------
+create 
+(D{name:'Dan'}),
+(K{name:'Kate'}),
+(M{name:'Mike'}),
+(L{name:'Luke'}),
+(S{name:'Steve'}),
+(F{name:'Favour'}),
+(faith{name:'Faith'}),
+(J{name:'Jane'}),
+(D)-[:MARRIED_TO]->(K)-[:MARRIED]->(D),
+(D)-[:PARENT_OF]->(M)<-[:PARENT_OF]-(K),
+(D)-[:PARENT_OF]->(L)<-[:PARENT_OF]-(K),
+(D)-[:PARENT_OF]->(S)<-[:PARENT_OF]-(K),
+(F)-[:MARRIED_TO]->(S)-[:MARRIED]->(F),
+(F)-[:PARENT_OF]->(faith)<-[:PARENT_OF]-(S),
+(F)-[:PARENT_OF]->(J)<-[:PARENT_OF]-(S)
+RETURN *
+
+
+
+With labels
+-----------
+
+create 
+(D:Person{name:'Dan'}),
+(K:Person{name:'Kate'}),
+(M:Person{name:'Mike'}),
+(L:Person{name:'Luke'}),
+(S:Person{name:'Steve'}),
+(F:Person{name:'Favour'}),
+(faith:Person{name:'Faith'}),
+(J:Person{name:'Jane'}),
+(D)-[:MARRIED_TO]->(K)-[:MARRIED]->(D),
+(D)-[:PARENT_OF]->(M)<-[:PARENT_OF]-(K),
+(D)-[:PARENT_OF]->(L)<-[:PARENT_OF]-(K),
+(D)-[:PARENT_OF]->(S)<-[:PARENT_OF]-(K),
+(F)-[:MARRIED_TO]->(S)-[:MARRIED]->(F),
+(F)-[:PARENT_OF]->(faith)<-[:PARENT_OF]-(S),
+(F)-[:PARENT_OF]->(J)<-[:PARENT_OF]-(S)
+RETURN *
+
+

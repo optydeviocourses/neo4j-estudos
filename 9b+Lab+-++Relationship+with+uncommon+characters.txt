@@ -1,0 +1,7 @@
+
+create (a{name:'Andrew'})<-[:`the forgotten friend of`]-(m{name:'Mike'})
+return *
+
+
+create (a:Person{name:'Andrew'})<-[:`the forgotten friend of`]-(m:Person{name:'Mike'})
+return *

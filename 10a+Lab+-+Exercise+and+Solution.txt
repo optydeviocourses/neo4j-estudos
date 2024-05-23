@@ -1,0 +1,20 @@
+create 
+(T:Person{name:'Tim'}),
+(K:Person{name:'Kate'}),
+(J:Person{name:'John'}),
+(T)-[:Follows]->(J),
+(T)-[:Follows]->(K),
+(K)-[:Follows]->(T),
+(J)-[:Follows]->(K)
+return *
+
+
+
+-----------------------
+
+create 
+(T:Person{name:'Tim'}),
+(K:Person{name:'Kate'}),
+(J:Person{name:'John'}),
+(K)-[:Follows]->(T)-[:Follows]->(J)-[:Follows]->(K)<-[:Follows]-(T)
+return *

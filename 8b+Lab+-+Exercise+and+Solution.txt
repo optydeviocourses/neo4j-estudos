@@ -1,0 +1,3 @@
+create (h:Property{name:"House"})<-[r:Has]-(p:Person{name:"Peter"})-[:Married]->(a:Person{name:"Anne"})
+return *
+

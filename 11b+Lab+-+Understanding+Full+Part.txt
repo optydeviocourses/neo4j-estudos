@@ -1,0 +1,18 @@
+
+create path = (n:Supplier{name:'A'})-[r:Supplied]-> (m:Client{name:'B'})
+return path
+
+
+create p = (h:Property{name:"House"})<-[r:Has]-(b:Person{name:"Peter"})-[:Married]->(a:Person{name:"Anne"})
+return p
+
+create tony = ({name:"Peter", age:25, email:"p@gmail.com"}),
+({name:"Peter", age:25, email:"p@gmail.com"}),
+({name:"Peter", age:25, email:"p@gmail.com"})
+return tony
+
+
+create tony = ({name:"Peter", age:25, email:"p@gmail.com"}),
+tony2 = ({name:"Peter", age:25, email:"p@gmail.com"}),
+tony3 = ({name:"Peter", age:25, email:"p@gmail.com"})
+return tony2

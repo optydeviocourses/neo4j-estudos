@@ -1,0 +1,13 @@
+create
+(d:Person{name:"Dan"}),
+(c:Vehicle{name:"Car"}),
+(a:Person{name:"Andrew"}),
+(e:Person{name:"Eric"}),
+(dog:Animal{name:"Dog"}),
+(l:Location{name:"AB Street"}),
+(crime:Crime{title:"Killing of a dog"}),
+(d)-[:Party_to]->(crime)<-[:Involved_in]-(c),
+(a)-[:Party_to]->(crime)<-[:Investigated_by]-(e),
+(dog)-[:Victim_of]->(crime)<-[:Occurred_at]-(l),
+(dog)-[:Killed_at]->(l)
+return *

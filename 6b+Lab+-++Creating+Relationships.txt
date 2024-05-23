@@ -1,0 +1,10 @@
+create (n:Supplier{name:'A'}),
+(m:Client{name:'B'}),
+(n)-[:Supplied]->(m)
+return n, m
+
+
+
+create (n:Supplier{name:'A'})-[r:Supplied]-> (m:Client{name:'B'})
+return m,n,r
+
